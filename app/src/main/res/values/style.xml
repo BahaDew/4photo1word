@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AnswerButton">
+        <item name="android:background">@drawable/answer_button_backround</item>
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#462502</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:text">A</item>
+        <item name="android:fontFamily">@font/tilt_neon_regular</item>
+    </style>
+
+    <style name="VariantsButton">
+        <item name="android:background">@drawable/variants_button_backround</item>
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/tilt_neon_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">A</item>
+        <item name="android:elevation">10dp</item>
+    </style>
+
+    <style name="TestImages">
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">170dp</item>
+        <item name="android:foreground">@drawable/image_background</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+</resources>

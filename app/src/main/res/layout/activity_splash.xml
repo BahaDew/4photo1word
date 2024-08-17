@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".presentation.splash.SplashActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:alpha="0"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="#FFF"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo_4p1w" />
+    </androidx.cardview.widget.CardView>
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

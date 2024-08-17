@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.game.GameActivity">
+
+    <View
+        android:id="@+id/sb"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/container_txt_coin"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_coins_count"
+        android:elevation="8dp"
+        android:paddingStart="35dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sb">
+
+        <TextView
+            android:id="@+id/txt_coin_cnt"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="@font/pacifico_regular"
+            android:gravity="center"
+            android:shadowColor="#B74B0B"
+            android:shadowRadius="5"
+            android:text="10"
+            android:textColor="#EF8821"
+            android:textSize="20dp" />
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/img_coin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/app_name"
+        android:elevation="10dp"
+        android:src="@drawable/img_coin"
+        app:layout_constraintBottom_toBottomOf="@id/container_txt_coin"
+        app:layout_constraintLeft_toLeftOf="@id/container_txt_coin"
+        app:layout_constraintRight_toLeftOf="@id/container_txt_coin"
+        app:layout_constraintTop_toTopOf="@id/container_txt_coin" />
+
+    <View
+        android:id="@+id/images"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintBottom_toTopOf="@id/buttons"
+        app:layout_constraintTop_toBottomOf="@id/img_coin"
+        app:layout_constraintVertical_weight="3" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/images_bg" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_img1"
+        android:clickable="true"
+        android:clipToOutline="true"
+        android:contentDescription="@string/todo"
+        android:elevation="10dp"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bank1"
+        app:layout_constraintBottom_toTopOf="@id/img3"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/images"
+        app:layout_constraintRight_toLeftOf="@id/img2"
+        app:layout_constraintTop_toTopOf="@id/images" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_img2"
+        android:clipToOutline="true"
+        android:contentDescription="@string/todo"
+        android:elevation="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bank2"
+        app:layout_constraintBottom_toTopOf="@id/img4"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toRightOf="@id/img1"
+        app:layout_constraintRight_toRightOf="@id/images"
+        app:layout_constraintTop_toTopOf="@id/images" />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_img3"
+        android:clipToOutline="true"
+        android:contentDescription="@string/todo"
+        android:elevation="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bank3"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/images"
+        app:layout_constraintRight_toLeftOf="@id/img4"
+        app:layout_constraintTop_toBottomOf="@id/img1" />
+
+    <ImageView
+        android:id="@+id/img4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_img4"
+        android:clipToOutline="true"
+        android:contentDescription="@string/todo"
+        android:elevation="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bank4"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toRightOf="@id/img3"
+        app:layout_constraintRight_toRightOf="@id/images"
+        app:layout_constraintTop_toBottomOf="@id/img2" />
+
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="#939393"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/img3"
+        app:layout_constraintLeft_toLeftOf="@id/img1"
+        app:layout_constraintRight_toRightOf="@id/img2"
+        app:layout_constraintTop_toTopOf="@id/img1" />
+
+
+    <ImageView
+        android:layout_width="1500dp"
+        android:layout_height="1500dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_btns_card"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/buttons" />
+
+    <View
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/images"
+        app:layout_constraintVertical_weight="2" />
+
+    <LinearLayout
+        android:id="@+id/answer_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@id/buttons">
+
+        <TextView
+            style="@style/AnswerButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/AnswerButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/AnswerButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/AnswerButton"
+            android:layout_marginVertical="25dp" />
+
+        <TextView
+            style="@style/AnswerButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/AnswerButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/AnswerButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/AnswerButton"
+            android:layout_marginVertical="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/variants_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/answer_btn">
+
+        <TextView
+            style="@style/VariantsButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/VariantsButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/VariantsButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/VariantsButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/VariantsButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/VariantsButton"
+            android:layout_marginVertical="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/variants_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/variants_btn1"
+        app:layout_constraintTop_toBottomOf="@id/variants_btn1">
+
+        <TextView
+            style="@style/VariantsButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/VariantsButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/VariantsButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/VariantsButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/VariantsButton"
+            android:layout_marginVertical="30dp" />
+
+        <TextView
+            style="@style/VariantsButton"
+            android:layout_marginVertical="30dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#939393"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toTopOf="@id/img3"
+        app:layout_constraintLeft_toLeftOf="@id/img3"
+        app:layout_constraintRight_toRightOf="@id/img4"
+        app:layout_constraintTop_toBottomOf="@id/img2" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_corner_images"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/img3"
+        app:layout_constraintLeft_toLeftOf="@id/img1"
+        app:layout_constraintRight_toRightOf="@id/img2"
+        app:layout_constraintTop_toTopOf="@id/img1" />
+
+    <TextView
+        android:id="@+id/txt_level"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/level_bg"
+        android:elevation="10dp"
+        android:fontFamily="@font/libre_baskerville_regular"
+        android:gravity="center"
+        android:paddingEnd="2dp"
+        android:shadowColor="#FF9800"
+        android:shadowDx="7"
+        android:shadowDy="-1"
+        android:shadowRadius="2.5"
+        android:text="1"
+        android:textColor="#FFC107"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_coin" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/bg_back_white"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:padding="5dp"
+        android:src="@drawable/left_chevron_svgrepo_com"
+        app:layout_constraintBottom_toBottomOf="@id/img_coin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_coin" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/buttons"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img3">
+
+        <ImageView
+            android:id="@+id/btn_hint"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/bg_ripple_circle"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:elevation="10dp"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/magic_wand_svgrepo_com" />
+
+        <ImageView
+            android:id="@+id/btn_clear"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/bg_ripple_circle_red"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:elevation="10dp"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/delete_svgrepo_com" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

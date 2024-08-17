@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FourPhotoOneWord" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+<!--        <item name="colorPrimary">#5EB4F6</item>-->
+<!--        <item name="colorPrimaryDark">#5EB4F6</item>-->
+<!--        <item name="colorSecondary">#C84F4F</item>-->
+    </style>
+
+    <style name="Theme.FourPhotoOneWord" parent="Base.Theme.FourPhotoOneWord">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+<!--        <item name="colorPrimary">#5EB4F6</item>-->
+<!--        <item name="colorPrimaryDark">#5EB4F6</item>-->
+<!--        <item name="colorSecondary">#C84F4F</item>-->
+    </style>
+</resources>
